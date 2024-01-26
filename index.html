@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Salary Table</title>
+  <link rel="stylesheet" type="text/css" href="CSS/style.css">
+  <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+</head>
+
+<body>
+
+  <table border="1">
+    <thead>
+    
+      <tr id="jk-salary-calculator">
+        <th colspan="3">J&K Salary Calculator</th>
+      </tr>
+
+
+
+      <tr>
+        <th>Earnings</th>
+        <th>Select Fields</th>
+        <th>Amount</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Pay Level</td>
+        <td>
+          <select id="payLevelDropdown">
+
+        <option value="SL1">SL1 (14800-47100) / Grade Pay 1300</option>
+        <option value="SL2">SL2  (15900-50400) / Grade Pay 1400</option>
+        <option value="SL3">SL3 (16900-53500) / Grade Pay 1650</option>
+        <option value="Level-1">Level-1 (18000-56900) / Grade Pay 1800</option>
+        <option value="Level-2">Level-2 (19900-63200) / Grade Pay 1900</option>
+        <option value="Level-3A">Level-3A (25300-80500) / Grade Pay 2100</option>
+        <option value="Level-3B">Level-3B (25400-81000) / Grade Pay 2300</option>
+        <option value="Level-4">Level-4 (25500-81100) / Grade Pay 2400</option>
+        <option value="Level-5">Level-5 (29200-92300) / Grade Pay 2800</option>
+        <option value="Level-6">Level-6 (35400-112400) / Grade Pay 4200</option>
+        <option value="Level-6A">Level-6A (35500-112600) / Grade Pay 4210</option>
+        <option value="Level-6B">Level-6B (35600-112800) / Grade Pay 4220</option>
+        <option value="Level-6C">Level-6C (35700-113100) / Grade Pay 4240</option>
+        <option value="Level-6D">Level-6D (35800-113200) / Grade Pay 4260</option>
+        <option value="Level-6E">Level-6E (35900-113500) / Grade Pay 4280</option>
+        <option value="Level-6F">Level-6F (40800-129200) / Grade Pay 4300</option>
+        <option value="Level-6G">Level-6G (42300-134300) / Grade Pay 4400</option>
+        <option value="Level-7">Level-7 (44900-142400) / Grade Pay 4600</option>
+        <option value="Level-8">Level-8 (47600-151100) / Grade Pay 4800</option>
+        <option value="Level-8A">Level-8A (52700-160600) / Grade Pay 5200</option>
+        <option value="Level-9">Level-9 (52700-166700) / Grade Pay 5400</option>
+        <option value="Level-10A">Level-10A (56600-56900) / Grade Pay 5600</option>
+        <option value="Level-11">Level-11 (67700-179800) / Grade Pay 6600</option>
+        <option value="Level-12">Level-12 (78800-209200) / Grade Pay 7600</option>
+        <option value="Level-13">Level-13 (123100-215900) / Grade Pay 8700</option>
+        <option value="Level-13A">Level-13A (13100-216600) / Grade Pay 8900</option>
+        <option value="Level-14">Level-14 (144200-218200) / Grade Pay 10000 </option>
+        <option value="Level-15">Level-15 (182200-224100) </option>
+        <option value="Level-16">Level-16 (205400-224400) </option>
+        <option value="Level-17">Level-17 (225000) </option>
+          </select>
+        </td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Basic Pay</td>
+        <td>
+          <select id="basicPayDropdown">
+          </select>
+        </td>
+        <td id="basicPayOutput">0</td>
+      </tr>
+      <tr>
+        <td>Dearness Allowance (DA)</td>
+        <td>
+          <select id="daDropdown">
+          </select>
+        </td>
+        <td id="daOutput">0</td>
+      </tr>
+      <tr>
+        <td>House Rent Allowance (HRA)</td>
+        <td>
+          <select id="hraDropdown">
+            <option value="0">No HRA</option>
+            <option value="9">9% (Z Class Locations)</option>
+            <option value="18">18% (Y Class Cities - Srinagar / Jammu)</option>
+            <option value="27">27% (X Class Cities - All Metropolitan Cities)</option>
+          </select>
+        </td>
+        <td id="hraOutput">0</td>
+      </tr>
+      <tr>
+        <td>Transport Allowance</td>
+        <td>
+          <select id="taDropdown">
+            <option value="0">No TA</option>
+            <option value="900">Upto Level-2</option>
+            <option value="1800">Level-3 to Level-8</option>
+            <option value="3600">Level-9 and Above</option>
+            <option value="1350">Upto Level-2 (Higher TA Cities)</option>
+            <option value="3600">Level-3 to Level-8 (Higher TA Cities)</option>
+            <option value="7200">Level-9 and Above (Higher TA Cities)</option>
+          </select>
+        </td>
+        <td id="taOutput">0</td>
+      </tr>
+
+
+
+      <tr>
+        <td>Secretariat Allowance</td>
+        <td>
+          <select id="SecretariatAllowanceDropdown">
+            <option value="0">Not Entitled</option>
+            <option value="2000">Entitled</option>
+          </select>
+        </td>
+        <td id="SecretariatAllowanceOutput">0</td>
+      </tr>
+
+
+
+
+      <tr>
+        <td>City Compensatory Allowance (CCA)</td>
+        <td>
+          <select id="ccaDropdown">
+            <option value="0">No CCA</option>
+            <option value="65">65</option>
+            <option value="125">125</option>
+          </select>
+        </td>
+        <td id="ccaOutput">0</td>
+      </tr>
+
+      <tr>
+        <td>Medical Allowance (MA)</td>
+        <td>
+          <select id="maDropdown">
+            <option value="0">No MA</option>
+            <option value="300">300</option>
+          </select>
+        </td>
+        <td id="maOutput">0</td>
+      </tr>
+
+
+      <tr>
+        <td>Other Allowances</td>
+        <td>
+          <input type="number" id="otherAllowances" value="0" oninput="updateAllowances()">
+        </td>
+        <td id="otherAllowancesOutput">0</td>
+      </tr>
+
+
+      <tr>
+      <td>Deductions</td>
+      <td>
+      <input type="number" id="deductions" value="0" oninput="updateDeductionsOutput()">
+      </td>
+      <td id="DeductionsOutput">0</td>
+      </tr>
+
+      <tr id="gross-row">
+      <th colspan="2">Gross Salary</th>
+      <th id="gross">0</th>
+      </tr>
+
+      <tr id="NPS-row">
+        <th colspan="2">NPS Deduction</th>
+        <th id="NPS">0</th>
+      </tr>
+
+
+
+      <tr id="netOutput-row">
+        <th colspan="2">Net Salary</th>
+        <th id="netOutput">0</th>
+      </tr>
+
+    <tr id="buttons-row">
+    <td colspan="3">
+      <!-- Add Reset and Print buttons within a cell -->
+      <button onclick="resetForm()">Reset</button>
+      <button id="share" onclick="shareJPG()">Share</button>
+      <button id="references" onclick="openReferencesInNewTab()">References</button>
+    </td>
+  </tr>
+
+  
+    </tbody>
+  </table>
+
+
+
+
+<!-- JavaScripts -->
+
+  <script src="JavaScript/PayLevel.js"></script>
+  <script src="JavaScript/BasicPay.js"></script>
+  <script src="JavaScript/da.js"></script>
+  <script src="JavaScript/hra.js"></script>
+  <script src="JavaScript/ta.js"></script>
+  <script src="JavaScript/SecretariatAllowance.js"></script>
+  <script src="JavaScript/cca.js"></script>
+  <script src="JavaScript/ma.js"></script>
+  <script src="JavaScript/otherAllowances.js"></script>
+  <script src="JavaScript/gross.js"></script>
+  <script src="JavaScript/nps.js"></script>
+  <script src="JavaScript/netsalary.js"></script>
+  <script src="JavaScript/Deductions.js"></script>
+  <script src="JavaScript/reset.js"></script>
+  <script src="JavaScript/print.js"></script>
+  <script src="JavaScript/share.js"></script>
+
+
+
+
+
+  <script>
+    // JavaScript function to open the references HTML file in a new tab
+    function openReferencesInNewTab() {
+        // Use window.open to open the references.html file in a new tab
+        window.open('HTML/references.html', '_blank');
+    }
+</script>
+
+</body>
+
+</html>

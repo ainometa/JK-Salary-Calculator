@@ -1,0 +1,123 @@
+/* Reset default styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+/* Set styling for the main table */
+table {
+  width: 85%; /* Make the table fill the width of the container */
+  max-width: 100%; /* Ensure the table doesn't exceed the container width */
+  margin: 20px auto; /* Adjust margin for better spacing */
+  border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header styling */
+thead {
+  background-color: #3498db;
+  color: #fff;
+}
+
+/* Table cell styling */
+th, td {
+  padding: 10px; /* Slightly reduce padding for better spacing */
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  font-family: Tahoma, "Trebuchet MS", sans-serif;
+  font-size: 17px;
+}
+
+/* Center text in header cells */
+th {
+  text-align: center;
+}
+
+/* Input and select box styling */
+select, input {
+  padding: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: Tahoma, "Trebuchet MS", sans-serif;
+  font-size: 17px;
+}
+
+/* Styling for output cells (bold black text, center-aligned) */
+#basicPayOutput, #daOutput, #hraOutput, #taOutput, #SecretariatAllowanceOutput, #ccaOutput, #maOutput, #otherAllowancesOutput {
+  font-weight: bold;
+  color: #000000;
+  text-align: center;
+}
+
+/* Styling for Deductions output cell (bold red text, center-aligned) */
+#DeductionsOutput {
+  font-weight: bold;
+  color: #ff0000;
+  text-align: center;
+}
+
+/* Styling for Gross Salary output cell (bold green text) */
+#gross {
+  font-weight: bold;
+  color: #008000;
+}
+
+/* Styling for NPS Deduction output cell (bold red text) */
+#NPS {
+  font-weight: bold;
+  color: #940909;
+}
+
+/* Styling for Net Salary output cell (bold blue text) */
+#netOutput {
+  font-weight: bold;
+  color: #2709ba;
+}
+
+/* Styling for specific rows in the table */
+
+/* Light green background color for Gross Salary row */
+tr#gross-row {
+  background-color: #eaf7ea;
+}
+
+/* Light red background color for NPS Deduction row */
+tr#NPS-row {
+  background-color: #f9dddd;
+}
+
+/* Light blue background color for Net Salary row */
+tr#netOutput-row {
+  background-color: #e0e5f7;
+}
+
+/* Additional styling for the specific row */
+tr#jk-salary-calculator {
+  background-color: #3fe8cf; /* Adjust color as needed */
+  color: #181f1e;
+}
+
+/* Style for the buttons row */
+#buttons-row {
+  text-align: center;
+}
+
+/* Style for the buttons within the cell */
+#buttons-row button {
+  padding: 10px 20px;
+  margin: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #3498db; /* Blue color, you can change it to your preference */
+  color: #fff; /* White text color */
+  transition: background-color 0.3s;
+}
+
+#buttons-row button:hover {
+  background-color: #2980b9; /* Darker blue on hover */
+}
